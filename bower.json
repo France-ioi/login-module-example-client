@@ -1,0 +1,12 @@
+{
+  "name": "login-module-client",
+  "version": "0.1.0",
+  "homepage": "",
+  "authors": [
+    "France-IOI"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "jschannel": "https://github.com/France-ioi/jschannel.git#01f53a1"
+  }
+}
