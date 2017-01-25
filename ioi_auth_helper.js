@@ -15,11 +15,11 @@ function IOIAuthHelper(params) {
     this.win = null;
 }
 
-IOIAuthHelper.prototype.getRequestURL = function(status) {
+IOIAuthHelper.prototype.getRequestURL = function(state) {
     var p = [];
     p.push('client_id=' + encodeURIComponent(this.params.client_id));
     p.push('redirect_uri=' + encodeURIComponent(this.params.redirect_uri));
-    p.push('status=' + encodeURIComponent(status));
+    p.push('state=' + encodeURIComponent(state));
     p.push('scope=');
     p.push('response_type=code');
     return this.login_module_url +  '?' + p.join('&');
