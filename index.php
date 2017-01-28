@@ -1,3 +1,6 @@
+<?php
+    require_once __DIR__.'/config.php';
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -14,12 +17,12 @@
         <a id="login" href="#">Login popup</a>
 
         <pre id="js-result"></pre>
-        <pre id="php-result"></pre>
+        <div id="php-result"></div>
 
         <script type="text/javascript">
-            var backend_url = 'http://login-module-client.dev/oauth_callback.php';
+            var backend_url = '<?=$config['redirectUri']?>';
             var auth = new IOIAuthHelper({
-                client_id: 'S5HAEwTO6zUMmHcCp60gNYypt45cBpIdLvyd2x96',
+                client_id: '<?=$config['clientId']?>',
                 redirect_uri: backend_url,
                 onAuthorize: function(res) {
                     $('#js-result').html(JSON.stringify(res));
