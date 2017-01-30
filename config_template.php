@@ -3,10 +3,10 @@
 $login_module_host =  'http://login-module.dev';
 
 $config = [
-    'clientId' => 'S5HAEwTO6zUMmHcCp60gNYypt45cBpIdLvyd2x96',
-    'clientSecret' => 'r8RJ9067NCoc3l67zSEa6JT4V7JFcsnVnaIXZwqV',
-    'redirectUri' => 'http://login-module-client.dev/oauth_callback.php',
-    'urlAuthorize' => $login_module_host.'/authorization',
+    'clientId' => '2TtBe7ZRvX1kL1scrsJvMHSGfQhRKXskD7RIOvY1',
+    'clientSecret' => 'WxdQFS9gkNfDnTdNMtB3hHI6AstmiI82fKyRftSV',
+    'redirectUri' => 'http://login-module-example-client.dev/oauth_callback.php',
+    'urlAuthorize' => $login_module_host,
     'urlAccessToken' => $login_module_host.'/oauth_server/access_token',
     'urlResourceOwnerDetails' => $login_module_host.'/oauth_server/user_profile'
 ];

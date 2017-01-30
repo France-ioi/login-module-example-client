@@ -22,8 +22,10 @@
         <script type="text/javascript">
             var backend_url = '<?=$config['redirectUri']?>';
             var auth = new IOIAuthHelper({
+                url: '<?=$config['urlAuthorize']?>',
                 client_id: '<?=$config['clientId']?>',
                 redirect_uri: backend_url,
+
                 onAuthorize: function(res) {
                     $('#js-result').html(JSON.stringify(res));
                     $.get(backend_url + '?code=' + res.result.code)

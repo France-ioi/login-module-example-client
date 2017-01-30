@@ -3,7 +3,7 @@ function IOIAuthHelper(params) {
     this.login_module_url = 'http://login-module.dev/authorization';
 
     this.params = (function(params) {
-        var required = ['client_id', 'redirect_uri', 'onAuthorize', 'onDeny'], valid = true;
+        var required = ['url', 'client_id', 'redirect_uri', 'onAuthorize', 'onDeny'], valid = true;
         for(var i=0; i<required.length; i++) {
             if(typeof params[required[i]] === 'undefined') {
                 valid = false;
@@ -22,7 +22,7 @@ IOIAuthHelper.prototype.getRequestURL = function(state) {
     p.push('state=' + encodeURIComponent(state));
     p.push('scope=');
     p.push('response_type=code');
-    return this.login_module_url +  '?' + p.join('&');
+    return this.params.url + (this.params.url.indexOf('?') === -1 ? '?' : '&') + p.join('&');
 }
 
 IOIAuthHelper.prototype.callback = function(name, args) {
