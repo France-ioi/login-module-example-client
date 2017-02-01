@@ -6,7 +6,7 @@ require_once __DIR__.'/config.php';
 echo '<pre>';
 
 if(isset($_GET['code'])) {
-    $provider = new \League\OAuth2\Client\Provider\GenericProvider($config);
+    $provider = new \League\OAuth2\Client\Provider\GenericProvider($config['oauth']);
     try {
         $accessToken = $provider->getAccessToken('authorization_code', [ 'code' => $_GET['code'] ]);
 
