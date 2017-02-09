@@ -20,7 +20,7 @@ IOIAuthHelper.prototype.getRequestURL = function(state) {
     p.push('client_id=' + encodeURIComponent(this.params.client_id));
     p.push('redirect_uri=' + encodeURIComponent(this.params.redirect_uri));
     p.push('state=' + encodeURIComponent(state));
-    p.push('scope=');
+    p.push('scope=user_profile');
     p.push('response_type=code');
     return this.params.url + (this.params.url.indexOf('?') === -1 ? '?' : '&') + p.join('&');
 }

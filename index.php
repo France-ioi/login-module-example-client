@@ -6,7 +6,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>IOI Auth popup login</title>
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>            
+        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="bower_components/jschannel/src/jschannel.js"></script>
         <script type="text/javascript" src="ioi_auth_helper.js"></script>
     </head>
