@@ -1,28 +1,37 @@
 <?php
 
-require_once __DIR__.'/vendor/autoload.php';
-require_once __DIR__.'/config.php';
+    require_once __DIR__.'/vendor/autoload.php';
+    require_once __DIR__.'/config.php';
 
-echo '<pre>';
-
-if(isset($_GET['code'])) {
-    $provider = new \League\OAuth2\Client\Provider\GenericProvider($config['oauth']);
-    try {
-        $accessToken = $provider->getAccessToken('authorization_code', [ 'code' => $_GET['code'] ]);
-
-        echo 'Access token: '.$accessToken->getToken(). "\n";
-        echo 'Token expires: '.$accessToken->getExpires() . "\n";
-        echo 'Token: '.($accessToken->hasExpired() ? 'expired' : 'not expired') . "\n";
-
-        $resourceOwner = $provider->getResourceOwner($accessToken);
-        echo "Resource owner data:\n";
-        var_export($resourceOwner->toArray());
-    } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
-        echo($e->getMessage());
+    if(isset($_GET['code'])) {
+        $provider = new \League\OAuth2\Client\Provider\GenericProvider($config['oauth']);
+        try {
+            $token = $provider->getAccessToken('authorization_code', [ 'code' => $_GET['code'] ]);
+            $result = array(
+                'user' => $provider->getResourceOwner($token)->toArray()
+            );
+        } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
+            $result = array(
+                'error' => 'client_error',
+                'error_description' => $e->getMessage()
+            );
+        }
+    } else {
+        $result = array(
+            'error' => $_GET['error'],
+            'error_description' => $_GET['error_description']
+        );
     }
-} else {
-    echo('Error: '.$_GET['error'])."\n";
-    echo($_GET['error_description'])."\n";
-}
-
-echo '</pre>';
+?>
+<!DOCTYPE html>
+<html>
+<body>
+    <script type="text/javascript">
+        if(window.opener && window.opener['__IOIAuthHelper']) {
+            window.opener.__IOIAuthHelper.popupCallback(<?=json_encode($result)?>);
+        } else {
+            window.close();
+        }
+    </script>
+</body>
+</html>

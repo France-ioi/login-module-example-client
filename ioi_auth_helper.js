@@ -1,9 +1,7 @@
 function IOIAuthHelper(params) {
 
-    this.login_module_url = 'http://login-module.dev/authorization';
-
     this.params = (function(params) {
-        var required = ['url', 'client_id', 'redirect_uri', 'onAuthorize', 'onDeny'], valid = true;
+        var required = ['url', 'client_id', 'redirect_uri', 'onAuthorize', 'onError'], valid = true;
         for(var i=0; i<required.length; i++) {
             if(typeof params[required[i]] === 'undefined') {
                 valid = false;
@@ -13,6 +11,8 @@ function IOIAuthHelper(params) {
         return valid ? params : false;
     })(params);
     this.win = null;
+
+    window.__IOIAuthHelper = this;
 }
 
 IOIAuthHelper.prototype.getRequestURL = function(state) {
@@ -20,7 +20,7 @@ IOIAuthHelper.prototype.getRequestURL = function(state) {
     p.push('client_id=' + encodeURIComponent(this.params.client_id));
     p.push('redirect_uri=' + encodeURIComponent(this.params.redirect_uri));
     p.push('state=' + encodeURIComponent(state));
-    p.push('scope=user_profile');
+    p.push('scope=account');
     p.push('response_type=code');
     return this.params.url + (this.params.url.indexOf('?') === -1 ? '?' : '&') + p.join('&');
 }
@@ -38,23 +38,12 @@ IOIAuthHelper.prototype.callback = function(name, args) {
 IOIAuthHelper.prototype.authorize = function(state) {
     if(!this.params) return;
     var url = this.getRequestURL(state || '');
-    var win = window.open(url, 'ioi_login', 'menubar=no, status=no, scrollbars=no, menubar=no, width=500, height=600')
-    win.focus();
+    this.win = window.open(url, 'ioi_login', 'menubar=no, status=no, scrollbars=no, menubar=no, width=500, height=600')
+    this.win.focus();
+}
 
-    var chan = Channel.build({
-        window: win,
-        origin: '*',
-        scope: 'ioi_login'
-    })
 
-    var self = this;
-    chan.bind('authorize', function(t, params) {
-        win.close()
-        self.callback('onAuthorize', params);
-    });
-
-    chan.bind('deny', function(t, params) {
-        win.close()
-        self.callback('onDeny', params);
-    });
+IOIAuthHelper.prototype.popupCallback = function(result) {
+    this.win.close();
+    this.callback(result.error ? 'onError' : 'onAuthorize', result);
 }

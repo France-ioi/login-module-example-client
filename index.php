@@ -12,12 +12,9 @@
     </head>
     <body>
         <h3>OAuth tests</h3>
-        <a href="/oauth_redirect.php">Login redirect</a>
+        <!--<a href="/oauth_redirect.php">Login redirect</a>-->
         <a id="login" href="#">Login popup</a>
-
         <pre id="js-result"></pre>
-        <div id="php-result"></div>
-
         <script type="text/javascript">
             var backend_url = '<?=$config['oauth']['redirectUri']?>';
             var auth = new IOIAuthHelper({
@@ -26,17 +23,10 @@
                 redirect_uri: backend_url,
 
                 onAuthorize: function(res) {
-                    $('#js-result').html(JSON.stringify(res));
-                    $.get(backend_url + '?code=' + res.result.code)
-                        .done(function(data) {
-                            $('#php-result').html(data);
-                        })
-                        .fail(function(data) {
-                            $('#php-result').html(data);
-                        })
+                    $('#js-result').html('User data:\n' + JSON.stringify(res));
                 },
-                onDeny: function(res) {
-                    $('#js-result').html(JSON.stringify(res));
+                onError: function(res) {
+                    $('#js-result').html('Error: \n' + JSON.stringify(res));
                 }
             })
             $('#login').click(function() {
