@@ -3,6 +3,8 @@
     require_once __DIR__.'/vendor/autoload.php';
     require_once __DIR__.'/config.php';
 
+    session_start();
+
     if(!isset($_GET['error'])) {
         $provider = new \League\OAuth2\Client\Provider\GenericProvider($config['oauth']);
         try {
@@ -20,12 +22,10 @@
                     $_SESSION['oauth_access_token'] = serialize($new_access_token);
                     $access_token = $new_access_token;
                 }
-
+                $result = array(
+                    'user' => $provider->getResourceOwner($access_token)->toArray()
+                );
             }
-            $result = array(
-                'user' => $provider->getResourceOwner($access_token)->toArray(),
-                'access_token' => $access_token
-            );
         } catch (\League\OAuth2\Client\Provider\Exception\IdentityProviderException $e) {
             $result = array(
                 'error' => 'client_error',
@@ -44,7 +44,7 @@
 <body>
     <script type="text/javascript">
         if(window.opener && window.opener['__IOIAuthHelper']) {
-            window.opener.__IOIAuthHelper.oauthCallback(<?=json_encode($result)?>);
+            window.opener.__IOIAuthHelper.accountCallback(<?=json_encode($result)?>);
         } else {
             window.close();
         }

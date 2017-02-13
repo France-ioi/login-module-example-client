@@ -6,7 +6,7 @@ function IOIAuthHelper(params) {
 }
 
 IOIAuthHelper.prototype.popup = function(url) {
-    var win = window.open(url, '__IOI_AUTH_POPUP', 'menubar=no, status=no, scrollbars=no, menubar=no, width=500, height=600')
+    var win = window.open(url, '__IOI_AUTH_POPUP', 'menubar=no, status=no, scrollbars=yes, menubar=no, width=500, height=600')
     win.focus();
     return win;
 }
