@@ -6,14 +6,31 @@
     */
 
 
-    function codeValid($code) {
-        return $code && $code < 100;
+
+    function logMsg($msg) {
+        file_put_contents(
+            __DIR__.'/logs/badge.log',
+            '['.date('Y-m-d H:i:s').'] '.$msg.PHP_EOL,
+            FILE_APPEND | LOCK_EX
+        );
     }
 
 
     function outputJSON($data) {
+        logMsg('RESPONSE: '.print_r($data, true));
         header('Content-Type: application/json');
         die(json_encode($data));
+    }
+
+
+    function outputNull() {
+        logMsg('RESPONSE: null');
+        die('null'); // lol
+    }
+
+
+    function codeValid($code) {
+        return $code && $code < 100;
     }
 
 
@@ -40,7 +57,7 @@
     }
 
 
-
+    logMsg('REQUEST: '.print_r($_POST, true));
     $action = getParam('action');
     $code = (int) getParam('code');
 
@@ -52,7 +69,7 @@
                     'userInfos' => generateUser($code)
                 ]);
             }
-            die('null'); // lol
+            outputNULL();
             break;
 
         case 'removeByCode':
