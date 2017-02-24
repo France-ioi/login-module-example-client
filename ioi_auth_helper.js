@@ -50,7 +50,7 @@ IOIAuthHelper.prototype.oauth = function(state) {
 }
 
 IOIAuthHelper.prototype.oauthCallback = function(result) {
-    this.win.close();
+    this.win && this.win.close();
     this.callback(result.error ? 'oauth.onError' : 'oauth.onSuccess', result);
 }
 
@@ -67,7 +67,7 @@ IOIAuthHelper.prototype.logout = function(state) {
 }
 
 IOIAuthHelper.prototype.logoutCallback = function(result) {
-    this.win.close();
+    this.win && this.win.close();
     this.callback(result.error ? 'logout.onError' : 'logout.onSuccess', result);
 }
 
@@ -84,6 +84,6 @@ IOIAuthHelper.prototype.account = function(state) {
 }
 
 IOIAuthHelper.prototype.accountCallback = function(result) {
-    this.win.close();
+    this.win && this.win.close();
     this.callback(result.error ? 'account.onError' : 'account.onSuccess', result);
 }

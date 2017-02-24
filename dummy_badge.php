@@ -6,7 +6,9 @@
     */
 
 
-    const VALID_CODE_THRESHOLD = 100;
+    function codeValid($code) {
+        return $code && $code < 100;
+    }
 
 
     function outputJSON($data) {
@@ -18,6 +20,7 @@
     function generateUser($code) {
         return [
             'sLogin' => 'badge_login'.$code,
+            'sEmail' => 'email'.$code.'@test.test',
             'sFirstName' => 'badge_first_name'.$code,
             'sLastName' => 'badge_last_name'.$code,
             'sStudentId' => $code,
@@ -43,7 +46,7 @@
 
     switch($action) {
         case 'verifyCode':
-            if($code <= VALID_CODE_THRESHOLD) {
+            if(codeValid($code)) {
                 outputJSON([
                     'success' => true,
                     'userInfos' => generateUser($code)
@@ -53,7 +56,7 @@
             break;
 
         case 'removeByCode':
-            if($code <= VALID_CODE_THRESHOLD) {
+            if(codeValid($code)) {
                 outputJSON([
                     'success' => true
                 ]);
@@ -66,7 +69,7 @@
 
         case 'updateInfos':
             $user_id = getParam('idUser');
-            if($code <= VALID_CODE_THRESHOLD) {
+            if(codeValid($code)) {
                 outputJSON([
                     'success' => true
                 ]);
