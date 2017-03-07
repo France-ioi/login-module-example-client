@@ -10,7 +10,7 @@ try {
     die($e->getMessage());
 }
 
-
+$base_url = (isset($_SERVER['HTTPS']) ? 'https' : 'http').'://'.$_SERVER['HTTP_HOST'];
 $action = isset($_GET['action']) ? $_GET['action'] : die('Empty action');
 switch($action) {
     case 'login':
@@ -18,19 +18,19 @@ switch($action) {
         $url = $authorization_helper->getUrl();
         break;
     case 'logout':
-        $url = $redirect_helper->getLogoutUrl($config['base_url'].'/callback_logout.php');
+        $url = $redirect_helper->getLogoutUrl($base_url.'/callback_logout.php');
         break;
     case 'profile':
-        $url = $redirect_helper->getProfileUrl($config['base_url'].'/callback_profile.php');
+        $url = $redirect_helper->getProfileUrl($base_url.'/callback_profile.php');
         break;
     case 'account':
-        $url = $redirect_helper->getAccountUrl($config['base_url'].'/callback_empty.php');
+        $url = $redirect_helper->getAccountUrl($base_url.'/callback_empty.php');
         break;
     case 'password':
-        $url = $redirect_helper->getPasswordUrl($config['base_url'].'/callback_empty.php');
+        $url = $redirect_helper->getPasswordUrl($base_url.'/callback_empty.php');
         break;
     case 'auth_connections':
-        $url = $redirect_helper->getAuthConnectionsUrl($config['base_url'].'/callback_empty.php');
+        $url = $redirect_helper->getAuthConnectionsUrl($base_url.'/callback_empty.php');
         break;
     default:
         die('Invalid action');
