@@ -7,7 +7,6 @@
   ],
   "license": "MIT",
   "dependencies": {
-    "jschannel": "https://github.com/France-ioi/jschannel.git#01f53a1",
     "jquery": "~3.1.1"
   }
 }

@@ -1,21 +1,18 @@
 <?php
-    if(isset($_GET['error'])) {
-        $result = array(
-            'error' => $_GET['error'],
-            'error_description' => $_GET['error_description']
-        );
-    } else {
-        $result = array(
-            'success' => true
-        );
-    }
+
+session_start();
+session_destroy();
+
+$result = [
+    'success' => true
+];
 ?>
 <!DOCTYPE html>
 <html>
 <body>
     <script type="text/javascript">
-        if(window.opener && window.opener['__IOIAuthHelper']) {
-            window.opener.__IOIAuthHelper.logoutCallback(<?=json_encode($result)?>);
+        if(window.opener && window.opener['__LoginModuleCallbackLogout']) {
+            window.opener.__LoginModuleCallbackLogout(<?=json_encode($result)?>);
         } else {
             window.close();
         }

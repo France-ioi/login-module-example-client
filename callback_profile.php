@@ -8,7 +8,6 @@ require_once __DIR__.'/config.php';
 try {
     $client = new FranceIOI\LoginModuleClient\Client($config['login_module']);
     $authorization_helper = $client->getAuthorizationHelper();
-    $authorization_helper->handleRequestParams($_GET);
     $user = $authorization_helper->queryUser();
     $_SESSION['user'] = $user;
     $result = array(
@@ -26,8 +25,8 @@ try {
 <html>
 <body>
     <script type="text/javascript">
-        if(window.opener && window.opener['__LoginModuleCallbackLogin']) {
-            window.opener.__LoginModuleCallbackLogin(<?=json_encode($result)?>);
+        if(window.opener && window.opener['__LoginModuleCallbackProfile']) {
+            window.opener.__LoginModuleCallbackProfile(<?=json_encode($result)?>);
         } else {
             window.close();
         }
