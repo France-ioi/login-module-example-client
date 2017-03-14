@@ -20,7 +20,7 @@
                 <a raction="account" href="#">Account</a>
                 <a raction="profile" href="#">Profile</a>
                 <a raction="password" href="#">Password</a>
-                <a raction="auth_connections" href="#">Auth methods</a>
+                <a raction="auth_methods" href="#">Auth methods</a>
                 <a raction="logout" href="#">Logout</a>
             </div>
         </div>

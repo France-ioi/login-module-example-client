@@ -29,8 +29,8 @@ switch($action) {
     case 'password':
         $url = $redirect_helper->getPasswordUrl($base_url.'/callback_empty.php');
         break;
-    case 'auth_connections':
-        $url = $redirect_helper->getAuthConnectionsUrl($base_url.'/callback_empty.php');
+    case 'auth_methods':
+        $url = $redirect_helper->getAuthMethodsUrl($base_url.'/callback_empty.php');
         break;
     default:
         die('Invalid action');
