@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2efa9130b5aad565114bea894f3cab22",
     "content-hash": "5c9bba6c0f22a6cef7a679c889645770",
     "packages": [
         {
@@ -60,7 +59,11 @@
                 "assertion",
                 "validation"
             ],
+<<<<<<< HEAD
             "time": "2017-03-14 18:06:52"
+=======
+            "time": "2017-03-14T18:06:52+00:00"
+>>>>>>> 3dc1e47edff37a30e6a3c5e54eefc752874bb535
         },
         {
             "name": "fgrosse/phpasn1",
@@ -129,7 +132,7 @@
                 "x509",
                 "x690"
             ],
-            "time": "2016-10-29 15:46:46"
+            "time": "2016-10-29T15:46:46+00:00"
         },
         {
             "name": "franceioi/login-module-client",
@@ -137,7 +140,11 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/France-ioi/login-module-client.git",
+<<<<<<< HEAD
                 "reference": "8d046d49b4e11709cd05279793b7ecabd9a55fca"
+=======
+                "reference": "aac095420f9b26edbff19f3afe864641aa07ee1b"
+>>>>>>> 3dc1e47edff37a30e6a3c5e54eefc752874bb535
             },
             "require": {
                 "league/oauth2-client": "^2.0",
@@ -153,7 +160,11 @@
                 "MIT"
             ],
             "description": "Login Module Client Library",
+<<<<<<< HEAD
             "time": "2017-03-14 15:29:36"
+=======
+            "time": "2017-03-31 03:31:57"
+>>>>>>> 3dc1e47edff37a30e6a3c5e54eefc752874bb535
         },
         {
             "name": "guzzlehttp/guzzle",
@@ -215,7 +226,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-02-28 22:50:30"
+            "time": "2017-02-28T22:50:30+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -266,7 +277,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20 10:07:11"
+            "time": "2016-12-20T10:07:11+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -331,7 +342,11 @@
                 "uri",
                 "url"
             ],
+<<<<<<< HEAD
             "time": "2017-03-20 17:10:46"
+=======
+            "time": "2017-03-20T17:10:46+00:00"
+>>>>>>> 3dc1e47edff37a30e6a3c5e54eefc752874bb535
         },
         {
             "name": "league/oauth2-client",
@@ -398,7 +413,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2017-02-02 04:08:45"
+            "time": "2017-02-02T04:08:45+00:00"
         },
         {
             "name": "mdanter/ecc",
@@ -464,7 +479,7 @@
                 "phpecc",
                 "secp256k1"
             ],
-            "time": "2017-01-04 12:13:24"
+            "time": "2017-01-04T12:13:24+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -512,7 +527,11 @@
                 "pseudorandom",
                 "random"
             ],
+<<<<<<< HEAD
             "time": "2017-03-13 16:27:32"
+=======
+            "time": "2017-03-13T16:27:32+00:00"
+>>>>>>> 3dc1e47edff37a30e6a3c5e54eefc752874bb535
         },
         {
             "name": "phpseclib/phpseclib",
@@ -604,7 +623,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2016-10-04 00:57:04"
+            "time": "2016-10-04T00:57:04+00:00"
         },
         {
             "name": "psr/cache",
@@ -650,7 +669,7 @@
                 "psr",
                 "psr-6"
             ],
-            "time": "2016-08-06 20:24:11"
+            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/http-message",
@@ -700,7 +719,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "spomky-labs/aes-key-wrap",
@@ -760,7 +779,11 @@
                 "padding",
                 "wrap"
             ],
+<<<<<<< HEAD
             "time": "2017-03-25 21:07:11"
+=======
+            "time": "2017-03-25T21:07:11+00:00"
+>>>>>>> 3dc1e47edff37a30e6a3c5e54eefc752874bb535
         },
         {
             "name": "spomky-labs/base64url",
@@ -812,7 +835,7 @@
                 "safe",
                 "url"
             ],
-            "time": "2016-01-21 19:50:30"
+            "time": "2016-01-21T19:50:30+00:00"
         },
         {
             "name": "spomky-labs/jose",
@@ -894,7 +917,7 @@
                 "jwa",
                 "jwt"
             ],
-            "time": "2017-02-06 18:22:51"
+            "time": "2017-02-06T18:22:51+00:00"
         },
         {
             "name": "spomky-labs/php-aes-gcm",
@@ -956,7 +979,7 @@
                 "aes",
                 "gcm"
             ],
-            "time": "2016-11-22 21:11:11"
+            "time": "2016-11-22T21:11:11+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1015,7 +1038,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14 01:06:16"
+            "time": "2016-11-14T01:06:16+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
@@ -1074,7 +1097,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14 01:06:16"
+            "time": "2016-11-14T01:06:16+00:00"
         }
     ],
     "packages-dev": [],
