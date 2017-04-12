@@ -13,9 +13,8 @@ $result = [
     <script type="text/javascript">
         if(window.opener && window.opener['__LoginModuleCallbackLogout']) {
             window.opener.__LoginModuleCallbackLogout(<?=json_encode($result)?>);
-        } else {
-            window.close();
         }
+        window.close();
     </script>
 </body>
 </html>

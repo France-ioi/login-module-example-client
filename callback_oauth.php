@@ -28,9 +28,8 @@ try {
     <script type="text/javascript">
         if(window.opener && window.opener['__LoginModuleCallbackLogin']) {
             window.opener.__LoginModuleCallbackLogin(<?=json_encode($result)?>);
-        } else {
-            window.close();
         }
+        window.close();
     </script>
 </body>
 </html>
