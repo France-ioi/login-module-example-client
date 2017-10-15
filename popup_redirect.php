@@ -15,7 +15,7 @@ $action = isset($_GET['action']) ? $_GET['action'] : die('Empty action');
 switch($action) {
     case 'login':
         $authorization_helper = $client->getAuthorizationHelper();
-        $url = $authorization_helper->getUrl();
+        $url = $authorization_helper->getUrl(['locale' => 'en']);
         break;
     case 'logout':
         $url = $redirect_helper->getLogoutUrl($base_url.'/callback_logout.php');

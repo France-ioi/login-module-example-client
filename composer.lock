@@ -9,16 +9,16 @@
     "packages": [
         {
             "name": "beberlei/assert",
-            "version": "v2.7.4",
+            "version": "v2.7.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/beberlei/assert.git",
-                "reference": "3ee3bc468a3ce4bbfc3d74f53c6cdb5242d39d1a"
+                "reference": "8726e183ebbb0169cb6cb4832e22ebd355524563"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/beberlei/assert/zipball/3ee3bc468a3ce4bbfc3d74f53c6cdb5242d39d1a",
-                "reference": "3ee3bc468a3ce4bbfc3d74f53c6cdb5242d39d1a",
+                "url": "https://api.github.com/repos/beberlei/assert/zipball/8726e183ebbb0169cb6cb4832e22ebd355524563",
+                "reference": "8726e183ebbb0169cb6cb4832e22ebd355524563",
                 "shasum": ""
             },
             "require": {
@@ -60,28 +60,28 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2017-03-14 18:06:52"
+            "time": "2017-05-04 02:00:24"
         },
         {
             "name": "fgrosse/phpasn1",
-            "version": "1.5.2",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fgrosse/PHPASN1.git",
-                "reference": "a18b162eca6aa70f8f15615f4ac8c852dffbc7dd"
+                "reference": "101e378aa9c82c76d9928fa6698471c9282df048"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/a18b162eca6aa70f8f15615f4ac8c852dffbc7dd",
-                "reference": "a18b162eca6aa70f8f15615f4ac8c852dffbc7dd",
+                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/101e378aa9c82c76d9928fa6698471c9282df048",
+                "reference": "101e378aa9c82c76d9928fa6698471c9282df048",
                 "shasum": ""
             },
             "require": {
                 "ext-gmp": "*",
-                "php": ">=5.6.0"
+                "php": ">=7.0.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.5",
+                "phpunit/phpunit": "~6.3",
                 "satooshi/php-coveralls": "dev-master"
             },
             "suggest": {
@@ -90,7 +90,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.5.x-dev"
+                    "dev-master": "2.0.x-dev"
                 }
             },
             "autoload": {
@@ -129,7 +129,7 @@
                 "x509",
                 "x690"
             ],
-            "time": "2016-10-29 15:46:46"
+            "time": "2017-09-17 14:43:07"
         },
         {
             "name": "franceioi/login-module-client",
@@ -137,7 +137,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/France-ioi/login-module-client.git",
-                "reference": "aac095420f9b26edbff19f3afe864641aa07ee1b"
+                "reference": "d8102ad0a79c1e68f4be4b49f0d0299883885bea"
             },
             "require": {
                 "league/oauth2-client": "^2.0",
@@ -153,20 +153,20 @@
                 "MIT"
             ],
             "description": "Login Module Client Library",
-            "time": "2017-03-31 03:31:57"
+            "time": "2017-10-15 13:53:22"
         },
         {
             "name": "guzzlehttp/guzzle",
-            "version": "6.2.3",
+            "version": "6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/guzzle/guzzle.git",
-                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006"
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/8d6c6cc55186db87b7dc5009827429ba4e9dc006",
-                "reference": "8d6c6cc55186db87b7dc5009827429ba4e9dc006",
+                "url": "https://api.github.com/repos/guzzle/guzzle/zipball/f4db5a78a5ea468d4831de7f0bf9d9415e348699",
+                "reference": "f4db5a78a5ea468d4831de7f0bf9d9415e348699",
                 "shasum": ""
             },
             "require": {
@@ -176,8 +176,11 @@
             },
             "require-dev": {
                 "ext-curl": "*",
-                "phpunit/phpunit": "^4.0",
+                "phpunit/phpunit": "^4.0 || ^5.0",
                 "psr/log": "^1.0"
+            },
+            "suggest": {
+                "psr/log": "Required for using the Log middleware"
             },
             "type": "library",
             "extra": {
@@ -215,7 +218,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-02-28 22:50:30"
+            "time": "2017-06-22 18:50:49"
         },
         {
             "name": "guzzlehttp/promises",
@@ -335,21 +338,21 @@
         },
         {
             "name": "league/oauth2-client",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/oauth2-client.git",
-                "reference": "5f57366c99ac013ee9d78670c1fc0b9ca7871d95"
+                "reference": "313250eab923e673a5c0c8f463f443ee79f4383f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/5f57366c99ac013ee9d78670c1fc0b9ca7871d95",
-                "reference": "5f57366c99ac013ee9d78670c1fc0b9ca7871d95",
+                "url": "https://api.github.com/repos/thephpleague/oauth2-client/zipball/313250eab923e673a5c0c8f463f443ee79f4383f",
+                "reference": "313250eab923e673a5c0c8f463f443ee79f4383f",
                 "shasum": ""
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.0",
-                "paragonie/random_compat": "^2.0",
+                "paragonie/random_compat": "^1|^2",
                 "php": ">=5.6.0"
             },
             "require-dev": {
@@ -398,30 +401,29 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2017-02-02 04:08:45"
+            "time": "2017-04-25 14:43:14"
         },
         {
             "name": "mdanter/ecc",
-            "version": "v0.4.2",
+            "version": "v0.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpecc/phpecc.git",
-                "reference": "fdd1fa9be8184c9f319433437cb1d9f9d4294164"
+                "reference": "ed5c6d496f5310de1b7071b8375fafa3559a1344"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpecc/phpecc/zipball/fdd1fa9be8184c9f319433437cb1d9f9d4294164",
-                "reference": "fdd1fa9be8184c9f319433437cb1d9f9d4294164",
+                "url": "https://api.github.com/repos/phpecc/phpecc/zipball/ed5c6d496f5310de1b7071b8375fafa3559a1344",
+                "reference": "ed5c6d496f5310de1b7071b8375fafa3559a1344",
                 "shasum": ""
             },
             "require": {
                 "ext-gmp": "*",
-                "fgrosse/phpasn1": "~1.5",
-                "paragonie/random_compat": "^1|^2",
-                "php": ">=5.6.0"
+                "fgrosse/phpasn1": "v2.0.x",
+                "php": ">=7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.1|~5.0",
+                "phpunit/phpunit": "^6.0",
                 "squizlabs/php_codesniffer": "~2",
                 "symfony/yaml": "~2.6|~3.0"
             },
@@ -446,6 +448,11 @@
                     "email": "thibaud@aztech.io",
                     "homepage": "http://aztech.io",
                     "role": "Maintainer"
+                },
+                {
+                    "name": "Thomas Kerin",
+                    "email": "afk11@users.noreply.github.com",
+                    "role": "Maintainer"
                 }
             ],
             "description": "PHP Elliptic Curve Cryptography library",
@@ -460,24 +467,26 @@
                 "nistp192",
                 "nistp224",
                 "nistp256",
+                "nistp384",
                 "nistp521",
                 "phpecc",
-                "secp256k1"
+                "secp256k1",
+                "secp256r1"
             ],
-            "time": "2017-01-04 12:13:24"
+            "time": "2017-10-09 16:05:37"
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.10",
+            "version": "v2.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d"
+                "reference": "5da4d3c796c275c55f057af5a643ae297d96b4d8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/634bae8e911eefa89c1abfbf1b66da679ac8f54d",
-                "reference": "634bae8e911eefa89c1abfbf1b66da679ac8f54d",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/5da4d3c796c275c55f057af5a643ae297d96b4d8",
+                "reference": "5da4d3c796c275c55f057af5a643ae297d96b4d8",
                 "shasum": ""
             },
             "require": {
@@ -512,20 +521,20 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-03-13 16:27:32"
+            "time": "2017-09-27 21:40:39"
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.4",
+            "version": "2.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "ab8028c93c03cc8d9c824efa75dc94f1db2369bf"
+                "reference": "34a7699e6f31b1ef4035ee36444407cecf9f56aa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/ab8028c93c03cc8d9c824efa75dc94f1db2369bf",
-                "reference": "ab8028c93c03cc8d9c824efa75dc94f1db2369bf",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/34a7699e6f31b1ef4035ee36444407cecf9f56aa",
+                "reference": "34a7699e6f31b1ef4035ee36444407cecf9f56aa",
                 "shasum": ""
             },
             "require": {
@@ -604,7 +613,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2016-10-04 00:57:04"
+            "time": "2017-06-05 06:31:10"
         },
         {
             "name": "psr/cache",
@@ -816,33 +825,32 @@
         },
         {
             "name": "spomky-labs/jose",
-            "version": "v6.1.4",
+            "version": "v7.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Spomky-Labs/jose.git",
-                "reference": "fccd7e024b10ad05e9374d745893b13311c4d49a"
+                "reference": "8c99915d9302bf088cfa2e37c08e1479ba022101"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Spomky-Labs/jose/zipball/fccd7e024b10ad05e9374d745893b13311c4d49a",
-                "reference": "fccd7e024b10ad05e9374d745893b13311c4d49a",
+                "url": "https://api.github.com/repos/Spomky-Labs/jose/zipball/8c99915d9302bf088cfa2e37c08e1479ba022101",
+                "reference": "8c99915d9302bf088cfa2e37c08e1479ba022101",
                 "shasum": ""
             },
             "require": {
                 "beberlei/assert": "^2.4",
-                "fgrosse/phpasn1": "^1.5",
+                "fgrosse/phpasn1": "^2.0",
                 "lib-openssl": "*",
-                "mdanter/ecc": "0.4.*",
-                "php": "^5.6|^7.0",
+                "mdanter/ecc": "0.5.*",
+                "php": "^7.0",
                 "psr/cache": "^1.0",
                 "spomky-labs/aes-key-wrap": "^3.0",
                 "spomky-labs/base64url": "^1.0",
                 "spomky-labs/php-aes-gcm": "^1.2",
-                "symfony/polyfill-mbstring": "^1.1",
-                "symfony/polyfill-php70": "^1.1"
+                "symfony/polyfill-mbstring": "^1.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.0",
+                "phpunit/phpunit": "^6.0",
                 "satooshi/php-coveralls": "^1.0",
                 "symfony/cache": "^2.0|^3.0"
             },
@@ -894,7 +902,7 @@
                 "jwa",
                 "jwt"
             ],
-            "time": "2017-02-06 18:22:51"
+            "time": "2017-10-11 19:55:27"
         },
         {
             "name": "spomky-labs/php-aes-gcm",
@@ -960,16 +968,16 @@
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
+                "reference": "7c8fae0ac1d216eb54349e6a8baa57d515fe8803",
                 "shasum": ""
             },
             "require": {
@@ -981,7 +989,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
@@ -1015,66 +1023,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14 01:06:16"
-        },
-        {
-            "name": "symfony/polyfill-php70",
-            "version": "v1.3.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "13ce343935f0f91ca89605a2f6ca6f5c2f3faac2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/13ce343935f0f91ca89605a2f6ca6f5c2f3faac2",
-                "reference": "13ce343935f0f91ca89605a2f6ca6f5c2f3faac2",
-                "shasum": ""
-            },
-            "require": {
-                "paragonie/random_compat": "~1.0|~2.0",
-                "php": ">=5.3.3"
-            },
-            "type": "library",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.3-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\Polyfill\\Php70\\": ""
-                },
-                "files": [
-                    "bootstrap.php"
-                ],
-                "classmap": [
-                    "Resources/stubs"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Nicolas Grekas",
-                    "email": "p@tchwork.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "Symfony polyfill backporting some PHP 7.0+ features to lower PHP versions",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "compatibility",
-                "polyfill",
-                "portable",
-                "shim"
-            ],
-            "time": "2016-11-14 01:06:16"
+            "time": "2017-06-14 15:44:48"
         }
     ],
     "packages-dev": [],
