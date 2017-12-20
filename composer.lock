@@ -64,16 +64,16 @@
         },
         {
             "name": "fgrosse/phpasn1",
-            "version": "2.0.0",
+            "version": "2.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fgrosse/PHPASN1.git",
-                "reference": "101e378aa9c82c76d9928fa6698471c9282df048"
+                "reference": "0e27e71e3d0a8d5c3f1471d727fd9574d920f33c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/101e378aa9c82c76d9928fa6698471c9282df048",
-                "reference": "101e378aa9c82c76d9928fa6698471c9282df048",
+                "url": "https://api.github.com/repos/fgrosse/PHPASN1/zipball/0e27e71e3d0a8d5c3f1471d727fd9574d920f33c",
+                "reference": "0e27e71e3d0a8d5c3f1471d727fd9574d920f33c",
                 "shasum": ""
             },
             "require": {
@@ -129,7 +129,7 @@
                 "x509",
                 "x690"
             ],
-            "time": "2017-09-17 14:43:07"
+            "time": "2017-12-17 10:21:51"
         },
         {
             "name": "franceioi/login-module-client",
@@ -137,7 +137,7 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/France-ioi/login-module-client.git",
-                "reference": "10190064b62e6efeddab7daa7eba4fa194f72510"
+                "reference": "9c527d3aa925395b5e2e96b4dd6a63a661ccec16"
             },
             "require": {
                 "guzzlehttp/guzzle": "^6.3",
@@ -154,7 +154,7 @@
                 "MIT"
             ],
             "description": "Login Module Client Library",
-            "time": "2017-12-13 17:02:28"
+            "time": "2017-12-20 18:17:40"
         },
         {
             "name": "guzzlehttp/guzzle",
