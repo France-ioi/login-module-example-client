@@ -24,7 +24,7 @@ function run($action) {
     echo '<pre>'.var_export($res, true).'</pre>';
 }
 
-$prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'test';
+$prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'test_';
 $amount = isset($_POST['amount']) ? $_POST['amount'] : '1';
 $auto_login = isset($_POST['auto_login']);
 ?>
