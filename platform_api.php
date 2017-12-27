@@ -5,14 +5,17 @@ require_once __DIR__.'/config.php';
 function run($action) {
     global $config;
     $client = new FranceIOI\LoginModuleClient\Client($config['login_module']);
-    $manager = $client->getAccountsManager();
+
     try {
         switch($action) {
             case 'create':
-                $res = $manager->create($_POST['prefix'], $_POST['amount'], isset($_POST['auto_login']));
+                $res = $client->getAccountsManager()->create($_POST['prefix'], $_POST['amount'], isset($_POST['auto_login']));
                 break;
             case 'delete':
-                $res = $manager->delete($_POST['prefix']);
+                $res = $client->getAccountsManager()->delete($_POST['prefix']);
+                break;
+            case 'reset_do_not_posess':
+                $res = $client->getBadgesManager()->resetDoNotPosess($_POST['user_id'], $_POST['code']);
                 break;
             default:
                 $res = 'Bad action';
@@ -27,14 +30,14 @@ function run($action) {
 $prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'test_';
 $amount = isset($_POST['amount']) ? $_POST['amount'] : '1';
 $auto_login = isset($_POST['auto_login']);
+$user_id = isset($_POST['user_id']) ? $_POST['user_id'] : '';
+$code = isset($_POST['code']) ? $_POST['code'] : '';
 ?>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title>Login module accounts manager client</title>
-        <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
-        <script type="text/javascript" src="demo_app.js"></script>
     </head>
     <body>
         <h3>Create accounts</h3>
@@ -60,6 +63,18 @@ $auto_login = isset($_POST['auto_login']);
             <input type="hidden" name="action" value="delete"/>
             <div>
                 Prefix <input type="text" name="prefix" value="<?=$prefix?>"/>
+            </div>
+            <input type="submit"/>
+        </form>
+
+        <h3>Reset do_not_posess</h3>
+        <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
+            <input type="hidden" name="action" value="reset_do_not_posess"/>
+            <div>
+                User ID <input type="text" name="user_id" value="<?=$user_id?>"/>
+            </div>
+            <div>
+                Badge code <input type="text" name="code" value="<?=$code?>"/>
             </div>
             <input type="submit"/>
         </form>

@@ -36,8 +36,8 @@
 
     function generateUser($code) {
         return [
-            'sLogin' => 'badge_login'.$code,
-            'sEmail' => 'email'.$code.'@test.test',
+            //'sLogin' => 'badge_login'.$code,
+            //'sEmail' => 'email'.$code.'@test.test',
             'sFirstName' => 'badge_first_name'.$code,
             'sLastName' => 'badge_last_name'.$code,
             'sStudentId' => $code,
