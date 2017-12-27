@@ -67,10 +67,9 @@
     switch($action) {
         case 'verifyCode':
             if(codeValid($code)) {
-                outputJSON([
-                    'success' => true,
-                    'userInfos' => generateUser($code)
-                ]);
+                outputJSON(
+                    generateUser($code)
+                );
             }
             outputNULL();
             break;
