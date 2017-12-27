@@ -43,7 +43,7 @@
             'sStudentId' => $code,
             'sSex' => 'm',
             'data' => [
-                'category' => 'badge_category'.$code,
+                'category' => 'badge_category'.$code
             ]
         ];
     }
