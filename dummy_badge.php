@@ -41,7 +41,10 @@
             'sFirstName' => 'badge_first_name'.$code,
             'sLastName' => 'badge_last_name'.$code,
             'sStudentId' => $code,
-            'sSex' => 'm'
+            'sSex' => 'm',
+            'data' => [
+                'category' => 'badge_category'.$code,
+            ]
         ];
     }
 
