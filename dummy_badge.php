@@ -38,8 +38,8 @@
         return [
             //'sLogin' => 'badge_login'.$code,
             //'sEmail' => 'email'.$code.'@test.test',
-            'sFirstName' => 'badge_first_name'.$code,
-            'sLastName' => 'badge_last_name'.$code,
+            'sFirstName' => 'Dmitriy', //'badge_first_name'.$code,
+            'sLastName' => 'Zubkov', //'badge_last_name'.$code,
             'sStudentId' => $code,
             'sSex' => 'm',
             'data' => [
