@@ -9,13 +9,22 @@ function run($action) {
     try {
         switch($action) {
             case 'create':
-                $res = $client->getAccountsManager()->create($_POST['prefix'], $_POST['amount'], isset($_POST['auto_login']));
+                $res = $client->getAccountsManager()->create([
+                    'prefix' => $_POST['prefix'],
+                    'amount' => $_POST['amount'],
+                    'auto_login' => isset($_POST['auto_login'])
+                ]);
                 break;
             case 'delete':
-                $res = $client->getAccountsManager()->delete($_POST['prefix']);
+                $res = $client->getAccountsManager()->delete([
+                    'prefix' => $_POST['prefix']
+                ]);
                 break;
             case 'reset_do_not_posess':
-                $res = $client->getBadgesManager()->resetDoNotPosess($_POST['user_id'], $_POST['code']);
+                $res = $client->getBadgesManager()->resetDoNotPossess([
+                    'user_id' => $_POST['user_id'],
+                    'code' => $_POST['code']
+                ]);
                 break;
             default:
                 $res = 'Bad action';
