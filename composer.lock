@@ -4,7 +4,6 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2efa9130b5aad565114bea894f3cab22",
     "content-hash": "5c9bba6c0f22a6cef7a679c889645770",
     "packages": [
         {
@@ -60,7 +59,7 @@
                 "assertion",
                 "validation"
             ],
-            "time": "2017-11-30 13:25:15"
+            "time": "2017-11-30T13:25:15+00:00"
         },
         {
             "name": "fgrosse/phpasn1",
@@ -129,7 +128,7 @@
                 "x509",
                 "x690"
             ],
-            "time": "2017-12-17 10:21:51"
+            "time": "2017-12-17T10:21:51+00:00"
         },
         {
             "name": "franceioi/login-module-client",
@@ -219,7 +218,7 @@
                 "rest",
                 "web service"
             ],
-            "time": "2017-06-22 18:50:49"
+            "time": "2017-06-22T18:50:49+00:00"
         },
         {
             "name": "guzzlehttp/promises",
@@ -270,7 +269,7 @@
             "keywords": [
                 "promise"
             ],
-            "time": "2016-12-20 10:07:11"
+            "time": "2016-12-20T10:07:11+00:00"
         },
         {
             "name": "guzzlehttp/psr7",
@@ -335,7 +334,7 @@
                 "uri",
                 "url"
             ],
-            "time": "2017-03-20 17:10:46"
+            "time": "2017-03-20T17:10:46+00:00"
         },
         {
             "name": "league/oauth2-client",
@@ -402,7 +401,7 @@
                 "oauth2",
                 "single sign on"
             ],
-            "time": "2017-04-25 14:43:14"
+            "time": "2017-04-25T14:43:14+00:00"
         },
         {
             "name": "mdanter/ecc",
@@ -474,7 +473,7 @@
                 "secp256k1",
                 "secp256r1"
             ],
-            "time": "2017-10-09 16:05:37"
+            "time": "2017-10-09T16:05:37+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -522,7 +521,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2017-09-27 21:40:39"
+            "time": "2017-09-27T21:40:39+00:00"
         },
         {
             "name": "phpseclib/phpseclib",
@@ -614,7 +613,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2017-11-29 06:38:08"
+            "time": "2017-11-29T06:38:08+00:00"
         },
         {
             "name": "psr/cache",
@@ -660,7 +659,7 @@
                 "psr",
                 "psr-6"
             ],
-            "time": "2016-08-06 20:24:11"
+            "time": "2016-08-06T20:24:11+00:00"
         },
         {
             "name": "psr/http-message",
@@ -710,7 +709,7 @@
                 "request",
                 "response"
             ],
-            "time": "2016-08-06 14:39:51"
+            "time": "2016-08-06T14:39:51+00:00"
         },
         {
             "name": "spomky-labs/aes-key-wrap",
@@ -770,7 +769,7 @@
                 "padding",
                 "wrap"
             ],
-            "time": "2017-03-25 21:07:11"
+            "time": "2017-03-25T21:07:11+00:00"
         },
         {
             "name": "spomky-labs/base64url",
@@ -822,7 +821,7 @@
                 "safe",
                 "url"
             ],
-            "time": "2016-01-21 19:50:30"
+            "time": "2016-01-21T19:50:30+00:00"
         },
         {
             "name": "spomky-labs/jose",
@@ -903,7 +902,7 @@
                 "jwa",
                 "jwt"
             ],
-            "time": "2017-10-11 19:55:27"
+            "time": "2017-10-11T19:55:27+00:00"
         },
         {
             "name": "spomky-labs/php-aes-gcm",
@@ -965,7 +964,7 @@
                 "aes",
                 "gcm"
             ],
-            "time": "2016-11-22 21:11:11"
+            "time": "2016-11-22T21:11:11+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
@@ -1024,7 +1023,7 @@
                 "portable",
                 "shim"
             ],
-            "time": "2017-10-11 12:05:26"
+            "time": "2017-10-11T12:05:26+00:00"
         }
     ],
     "packages-dev": [],
