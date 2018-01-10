@@ -12,7 +12,8 @@ function run($action) {
                 $res = $client->getAccountsManager()->create([
                     'prefix' => $_POST['prefix'],
                     'amount' => $_POST['amount'],
-                    'auto_login' => isset($_POST['auto_login'])
+                    'auto_login' => isset($_POST['auto_login']),
+                    'participation_code' => isset($_POST['participation_code'])
                 ]);
                 break;
             case 'delete':
@@ -39,8 +40,10 @@ function run($action) {
 $prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'test_';
 $amount = isset($_POST['amount']) ? $_POST['amount'] : '1';
 $auto_login = isset($_POST['auto_login']);
+$participation_code = isset($_POST['participation_code']);
 $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : '';
 $code = isset($_POST['code']) ? $_POST['code'] : '';
+
 ?>
 <!DOCTYPE html>
 <html>
@@ -62,6 +65,12 @@ $code = isset($_POST['code']) ? $_POST['code'] : '';
                 <label>
                     <input type="checkbox" name="auto_login" <?=($auto_login ? 'checked="checked"' : '')?>/>
                     Create auto login token
+                </label>
+            </div>
+            <div>
+                <label>
+                    <input type="checkbox" name="participation_code" <?=($participation_code ? 'checked="checked"' : '')?>/>
+                    Create participation code
                 </label>
             </div>
             <input type="submit"/>
