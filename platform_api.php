@@ -12,6 +12,8 @@ function run($action) {
                 $res = $client->getAccountsManager()->create([
                     'prefix' => $_POST['prefix'],
                     'amount' => $_POST['amount'],
+                    'postfix_length' => $_POST['postfix_length'],
+                    'password_length' => $_POST['password_length'],
                     'auto_login' => isset($_POST['auto_login']),
                     'participation_code' => isset($_POST['participation_code'])
                 ]);
@@ -41,6 +43,8 @@ $prefix = isset($_POST['prefix']) ? $_POST['prefix'] : 'test_';
 $amount = isset($_POST['amount']) ? $_POST['amount'] : '1';
 $auto_login = isset($_POST['auto_login']);
 $participation_code = isset($_POST['participation_code']);
+$postfix_length = isset($_POST['postfix_length']) ? $_POST['postfix_length'] : 3;
+$password_length = isset($_POST['password_length']) ? $_POST['password_length'] : 6;
 $user_id = isset($_POST['user_id']) ? $_POST['user_id'] : '';
 $code = isset($_POST['code']) ? $_POST['code'] : '';
 
@@ -56,10 +60,16 @@ $code = isset($_POST['code']) ? $_POST['code'] : '';
         <form action="<?=$_SERVER['PHP_SELF']?>" method="POST">
             <input type="hidden" name="action" value="create"/>
             <div>
+                Amount <input type="text" name="amount" value="<?=$amount?>"/>
+            </div>
+            <div>
                 Prefix <input type="text" name="prefix" value="<?=$prefix?>"/>
             </div>
             <div>
-                Amount <input type="text" name="amount" value="<?=$amount?>"/>
+                Postfix length  <input type="text" name="postfix_length" value="<?=$postfix_length?>"/>
+            </div>
+            <div>
+                Password length <input type="text" name="password_length" value="<?=$password_length?>"/>
             </div>
             <div>
                 <label>
