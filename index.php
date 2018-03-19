@@ -22,6 +22,7 @@
                 <a raction="badge" href="#">Badge</a>
                 <a raction="password" href="#">Password</a>
                 <a raction="auth_methods" href="#">Auth methods</a>
+                <a raction="verification" href="#">Verification</a>
                 <a raction="logout" href="#">Logout</a>
             </div>
         </div>
