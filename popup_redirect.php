@@ -35,6 +35,9 @@ switch($action) {
     case 'auth_methods':
         $url = $redirect_helper->getAuthMethodsUrl($base_url.'/callback_empty.php');
         break;
+    case 'verification':
+        $url = $redirect_helper->getVerificationUrl($base_url.'/callback_profile.php');
+        break;
     default:
         die('Invalid action');
 }
