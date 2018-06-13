@@ -40,7 +40,7 @@ var DemoApp = {
 
     openPopup: function(redirect_action) {
         var url = '/popup_redirect.php?action=' + redirect_action;
-        this.win = window.open(url, 'LOGIN_MODULE_POPUP', 'menubar=no, status=no, scrollbars=yes, menubar=no, width=500, height=600')
+        this.win = window.open(url, 'LOGIN_MODULE_POPUP', 'menubar=no, status=no, scrollbars=yes, menubar=no, width=800, height=600')
         this.win.focus();
     },
 
