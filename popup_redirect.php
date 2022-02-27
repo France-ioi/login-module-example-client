@@ -23,9 +23,6 @@ switch($action) {
     case 'profile':
         $url = $redirect_helper->getProfileUrl($base_url.'/callback_profile.php');
         break;
-    case 'account':
-        $url = $redirect_helper->getAccountUrl($base_url.'/callback_profile.php');
-        break;
     case 'badge':
         $url = $redirect_helper->getBadgeUrl($base_url.'/callback_profile.php');
         break;

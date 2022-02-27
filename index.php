@@ -17,7 +17,6 @@
             </div>
             <div id="nav_user">
                 <span id="user_id"></span>
-                <a raction="account" href="#">Account</a>
                 <a raction="profile" href="#">Profile</a>
                 <a raction="badge" href="#">Badge</a>
                 <a raction="password" href="#">Password</a>
