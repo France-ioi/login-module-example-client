@@ -1,5 +1,15 @@
 <?php
     session_start();
+
+    require_once __DIR__.'/vendor/autoload.php';
+    require_once __DIR__.'/config.php';
+    
+    try {
+        $client = new FranceIOI\LoginModuleClient\Client($config['login_module']);
+        $redirect_helper = $client->getRedirectHelper();
+    } catch(Exception $e) {
+        die($e->getMessage());
+    }
 ?>
 <!DOCTYPE html>
 <html>
@@ -23,6 +33,9 @@
                 <a raction="auth_methods" href="#">Auth methods</a>
                 <a raction="verification" href="#">Verification</a>
                 <a raction="logout" href="#">Logout</a>
+            </div>
+            <div id="nav_admin">
+                <a target="_blank" href="<?=$redirect_helper->getAdminInterfaceUrl('users')?>">Manage users</a>
             </div>
         </div>
         <pre id="result"></pre>

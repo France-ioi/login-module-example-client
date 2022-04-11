@@ -9,7 +9,7 @@ var DemoApp = {
 
         // init links
         var self = this;
-        $('#nav a').each(function(i, e) {
+        $('#nav a[raction]').each(function(i, e) {
             var action = $(e).attr('raction');
             $(e).click(function() {
                 self.openPopup(action);
@@ -34,7 +34,8 @@ var DemoApp = {
         this.user = user;
         $('#nav_guest').toggle(!user);
         $('#nav_user').toggle(!!user);
-        $('#user_id').html(user ? 'User #' + user.id : '');
+        $('#nav_admin').toggle(user && user.client_admin);
+        $('#user_id').html(user ? 'User #' + user.id + (user.client_admin ? ' [client admin]' : ''): '');
     },
 
 

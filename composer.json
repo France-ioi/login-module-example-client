@@ -6,7 +6,7 @@
       "lib-openssl": "*",
       "lib-curl": "*",
       "league/oauth2-client": "^2.0",
-      "franceioi/login-module-client": "dev-master"
+      "franceioi/login-module-client": "^2-dev"
    },
     "repositories": [
         {
